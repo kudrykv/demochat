@@ -2,7 +2,7 @@
 
 ## Run
 ```bash
-git clone github.com/kudrykv/demochat
+git clone https://github.com/kudrykv/demochat.git
 go mod download
 go build -o dc ./app
 ./dc
