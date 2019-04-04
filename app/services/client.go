@@ -97,6 +97,7 @@ func readMsgOrExit(u *Client, msgChan chan RequestMessage, exit chan bool) {
 					"ip":       u.ip,
 					"err":      err,
 				}).Warn("not JSON or closed")
+				u.hub.Remove(u)
 				return
 			}
 
