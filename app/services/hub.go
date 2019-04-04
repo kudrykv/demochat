@@ -39,7 +39,9 @@ func (s *Hub) Remove(client *Client) {
 	delete(s.nicknames, client.nickname)
 }
 
+// todo make func to return (*ResponseMessage, error) and make the caller deal w/ the response
 func (s *Hub) ProcessClientMessage(client *Client, message RequestMessage) {
+	// todo better routing than switch-case. setup funcs in map etc
 	switch message.Action {
 	case "SET_NICKNAME":
 		ActionSetNickname(s, client, message)
