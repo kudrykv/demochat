@@ -3,6 +3,7 @@
 ## Run
 ```bash
 git clone https://github.com/kudrykv/demochat.git
+cd demochat
 go mod download
 go build -o dc ./app
 ./dc
